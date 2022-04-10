@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>당신의 길을 밝히다. 등대지기</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../static/img/logo.png" th:src="@{/img/logo.png}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../static/vendor/animate.css/animate.min.css" th:href="@{/vendor/animate.css/animate.min.css}" rel="stylesheet">
+    <link href="../static/vendor/aos/aos.css" th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link href="../static/vendor/boxicons/css/boxicons.min.css" th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+    <link href="../static/vendor/remixicon/remixicon.css" th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+    <link href="../static/vendor/swiper/swiper-bundle.min.css" th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BMHANNAPro:wght@100;200;300;400;500;700;900&display=swap">
+
+    <link rel="stylesheet" href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css"
+    />
+    <link
+            rel="stylesheet"
+            href="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight.min.css"
+    />
+
+</head>
+
+<body style="height: 100%">
+
+<script type="text/javascript" src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+<script src="https://uicdn.toast.com/editor-plugin-code-syntax-highlight/latest/toastui-editor-plugin-code-syntax-highlight-all.min.js"></script>
+<section class="container pt-2 pb-5">
+
+    <form th:action="@{/community/write}" onsubmit="getMarkDown();" id="form" method="post" enctype="applicaion/json">
+        <input type="text" class="form-control my-3 py-3 h2" name="title" placeholder="제목 입력" aria-label="Username" aria-describedby="basic-addon1" style="border:none;border-right:0px; border-top:0px; boder-left:0px; boder-bottom:0px;">
+
+        <div id="tag_list" class="d-flex">
+        </div>
+
+        <select class="form-select mb-3" name="boardId" aria-label="Default select example">
+            <option selected>카테고리 선택</option>
+            <option value="3">자유/질문</option>
+            <option value="2">멘토</option>
+            <option value="1">멘티</option>
+        </select>
+        <div id="editor"></div>
+        <div class="d-flex justify-content-end my-2">
+            <button type="button" class="btn btn-dark mx-1">작성 취소</button>
+            <button type="button" class="btn btn-primary" onclick="document.getElementById('form').submit();">작성 끝</button>
+        </div>
+        <input type="hidden" id="context" name="context" value="">
+
+    </form>
+</section>
+
+
+<!-- Start Script -->
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../static/vendor/purecounter/purecounter.js" th:src="@{/vendor/purecounter/purecounter.js}"></script>
+<script src="../static/vendor/aos/aos.js" th:src="@{/vendor/aos/aos.js}"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script src="../static/vendor/swiper/swiper-bundle.min.js" th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+<script src="../static/vendor/php-email-form/validate.js" th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+<!-- Template Main JS File -->
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+<script>
+    const { Editor } = toastui;
+    const { codeSyntaxHighlight } = Editor.plugin;
+    const editor = new Editor.factory({
+        el: document.querySelector('#editor'),
+        height: '75vh',
+        initialEditType: 'markdown',
+        plugins: [codeSyntaxHighlight],
+        previewStyle: 'tab'
+    });
+
+    $(document).keyup(function(){
+        var context = editor.getMarkdown();
+        $('#context').val(context);
+    });
+    // 태그 추가
+    $('#tag').keyup(function(){
+        if(event.keyCode === 13 || event.keyCode === 188){
+            var tag = $('#tag').val().split(',')[0];
+            if(tag){
+                var hidden = document.getElementsByName("tag");
+                var chk=true;
+                hidden.forEach(function(element){
+                    if(tag===element.value){
+                        chk=false;
+                    }
+                });
+                if(chk){
+                    var input = document.createElement("input");
+                    var div = document.createElement("div");
+                    input.setAttribute("type","hidden");
+                    input.setAttribute("value",tag);
+                    input.setAttribute("name","tag");
+
+                    div.setAttribute("class","btn btn-primary py-1 mx-1 mb-3");
+                    div.onclick=function(){del_tag(this);};
+                    div.innerHTML = tag;
+
+                    document.getElementById("tag_list").appendChild(div);
+                    document.getElementById("tag_list").appendChild(input);
+
+                    $('#tag').val('');
+                }
+            }
+        }
+    });
+
+    //태그 삭제 기능
+    function del_tag(obj){
+        var input = document.getElementsByName("tag");
+        input.forEach(function(element){
+            if(obj.innerHTML===element.value){
+                document.getElementById("tag_list").removeChild(element);
+                document.getElementById("tag_list").removeChild(obj);
+                return;
+            }
+        });
+    }
+
+</script>
+<!-- End Script -->
+</body>
+
+</html>

@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>당신의 길을 밝히다. 등대지기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/logo.png" th:src="@{/img/logo.png}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/animate.css/animate.min.css" th:href="@{/vendor/animate.css/animate.min.css}" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+  <!-- Jquery File -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+
+  <!-- =======================================================
+  * Template Name: Mentor - v4.7.0
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html" th:href="@{/index}">등대지기</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="active" href="index.html" th:href="@{/index}">Home</a></li>
+
+        <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>학과정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>계열소개</span> </a>
+            </li>
+            <li class="dropdown"><a href="major-details.html" th:href="@{/major-details}"><span>계열별 전공소개</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>직업정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>이달의 인터뷰</span> </a>
+            </li>
+            <li class="dropdown"><a href="job-details.html" th:href="@{/job-details}"><span>직업 분류표</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>자격증</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>국가기술시험 일정</span> </a>
+            </li>
+            <li class="dropdown"><a href="license-details.html" th:href="@{/license-details}"><span>분야별 자격증</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+        <li><a href="mypage.html" th:href="@{/mypage}">마이페이지</a></li>
+        <li><a href="signup.html" th:href="@{/signup}">회원가입</a></li>
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <a href="login.html" th:href="@{/login}" class="get-started-btn">Login</a>
+
+  </div>
+</header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <h3>계열별 전공소개</h3>
+      <p>강조된 계열의 이름을 누르면 해당 계열의 자세한 설명을 볼 수 있습니다.</p>
+    </div><!-- End Breadcrumbs -->
+
+
+    <!-- ======= contents Section ======= -->
+    <section id="contents">
+      <div class="container" data-aos="fade-up">
+        <div class="sort-cont mb40">
+          <div id="classList" class="theme-cat bydepartment">
+            <ul>
+              <li><a href="#sel" id="0"  class="on w"><i></i>인문계열</a></li>
+              <li><a href="#sel" id="1" class="w"><i></i>사회계열</a></li>
+              <li><a href="#sel" id="2" class="w"><i></i>자연계열</a></li>
+              <li><a href="#sel" id="3" class="w"><i></i>공학계열</a></li>
+              <li><a href="#sel" id="4"class="w"><i></i>예체능계열</a></li>
+              <li><button class="btn btn-secondary">CTRL + F를 통해 특정 학과를 검색할 수 있습니다</button></li>
+            </ul>
+          </div>
+        </div>
+        <div id="classDiv" class="box-white pb10">
+          <ul id="classUl" class="dot-list v1 ">
+            <ul class="dot-list v1 y on_table">
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1_48evSN_A7qbbIBvV2N2Pzg9Lunzgl9D/view?usp=sharing" target="_blank">국어＇국문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>국어국문학과</span>
+                  <span>한국어문학과</span>
+                  <span>한국어학과</span>
+                  <span>한문학과</span>
+                  <span>미디어콘텐츠전공</span>
+                  <span>스토리텔링학과</span>
+                  <span>통상언어전공</span>
+                  <span>한국어교원학과</span>
+                  <span>한국어통번역전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1zkOwW1Kr2RH_gMPiXiapTVxu9pI6Lpt4/view?usp=sharing" target="_blank">국제지역학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>중국학과</span>
+                  <span>일본학과</span>
+                  <span>러시아학과</span>
+                  <span>미국학과</span>
+                  <span>국제지역학과</span>
+                  <span>글로벌학부</span>
+                  <span>동아시아학과</span>
+                  <span>아시아학부</span>
+                  <span>국제학</span>
+                  <span>독일학과</span>
+                  <span>북한학과</span>
+                  <span>아랍지역학과</span>
+                  <span>아세안지역전공</span>
+                  <span>영미지역학</span>
+                  <span>유라시아학과</span>
+                  <span>유럽학과</span>
+                  <span>중동학과</span>
+                  <span>프랑스학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/188pzjCwOvPC88DUUVDxZgyN6M87VWDIZ/view?usp=sharing" target="_blank">기타 아시아어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>태국어과</span>
+                  <span>몽골어과</span>
+                  <span>인도어(학)과</span>
+                  <span>동양어문학과</span>
+                  <span>베트남어과</span>
+                  <span>아랍어과</span>
+                  <span>말레이＇인도네시어과</span>
+                  <span>미얀마어과</span>
+                  <span>이란어과</span>
+                  <span>터키어과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1zDRBI4cmZ1WWHGeRAAng0QN58ZTe7yn6/view?usp=sharing" target="_blank">기타 유럽어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>네덜란드어과</span>
+                  <span>루마니아어과</span>
+                  <span>스칸디나비아어과</span>
+                  <span>그리스∙불가리아학과</span>
+                  <span>이탈리아어과</span>
+                  <span>포르투갈어과</span>
+                  <span>폴란드어과</span>
+                  <span>헝가리어과</span>
+                  <span>세르비아∙크로아티아어과</span>
+                  <span>우크라이나어과</span>
+                  <span>터키∙아제르바이잔어과</span>
+                  <span>아프리카어(학)과</span>
+                  <span>체코슬로바키아어과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1KiyZ_3SrRpN7t5N4OMOt_TL2cd4mkVfD/view?usp=sharing" target="_blank">독일어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>독어독문학과</span>
+                  <span>독일언어문화학과</span>
+                  <span>독일어과</span>
+                  <span>독일어통번역과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1JIFJ13Gw5eopsbotP0jYSpW2lpm9qMXa/view?usp=sharing" target="_blank">러시아어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>노어노문학과</span>
+                  <span>러시아어과</span>
+                  <span>러시아어문학과</span>
+                  <span>러시아언어문화전공</span>
+                  <span>러시아학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1b0K2Q6cUTOx0YiLLUGo1u7mPecVDyzxh/view?usp=sharing" target="_blank">문예창작과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>문예창작학과</span>
+                  <span>문예창작과</span>
+                  <span>미디어문예창작학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1e0q6rhdLlVca0PO4EirMTMPSg5EDVBSi/view?usp=sharing" target="_blank">문헌정보학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>문헌정보학과</span>
+                  <span>아동문헌정보학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1bWZ9o-xIIv-UDOYGsNr5CrRFInyX52wB/view?usp=sharing" target="_blank">문화＇민속＇미술사학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>문화인류학과</span>
+                  <span>미술사학과</span>
+                  <span>문화재보존학과</span>
+                  <span>고고미술사학과</span>
+                  <span>문화콘텐츠학과</span>
+                  <span>문화(학)과</span>
+                  <span>문화유적학과</span>
+                  <span>민속학과</span>
+                  <span>인류학과</span>
+                  <span>조형문화과</span>
+                  <span>한국문화전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1ntsRtZw31OfTFzaRwCIRHPPWdWzBDUbq/view?usp=sharing" target="_blank">스페인어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>스페인어과</span>
+                  <span>스페인∙중남미학과</span>
+                  <span>서어서문학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1nH07yGk7DG9HEj1jq8sJwUhsGNsTqpUi/view?usp=sharing" target="_blank">심리학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>심리학과</span>
+                  <span>상담심리학과</span>
+                  <span>심리치료학과</span>
+                  <span>뇌인지과학전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1kuvM597q2hk1vY_BE1YxSBgUhlrUY2tH/view?usp=sharing" target="_blank">언어학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>언어학과</span>
+                  <span>국제어문학부</span>
+                  <span>스토리텔링융복합전공</span>
+                  <span>언어인지과학과</span>
+                  <span>한국어교육학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/14r9jnb4nwlFDZp-VafxNSSu2cp4VL8JH/view?usp=sharing" target="_blank">역사＇고고학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>사학과</span>
+                  <span>국사학과</span>
+                  <span>역사문화학과</span>
+                  <span>역사학과</span>
+                  <span>한국사학과</span>
+                  <span>사학전공</span>
+                  <span>고고학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1egVFL6p78G5Ky8lHpDHMiLHAi1YJEhwz/view?usp=sharing" target="_blank">영미어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>영어영문학과</span>
+                  <span>영어학과</span>
+                  <span>영어과</span>
+                  <span>관광영어과</span>
+                  <span>실용영어학과</span>
+                  <span>영어통번역전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1RTjWV8CJgf3m6VIzUpdv4cGVf9Aexgiy/view?usp=sharing" target="_blank">일본어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>일어일문학과</span>
+                  <span>일본학과</span>
+                  <span>일본어과</span>
+                  <span>관광일어과</span>
+                  <span>일본비즈니스학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1-6G2QKj0nl8rRPFl1Kggd5wwvJHglZYT/view?usp=sharing" target="_blank">종교학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>신학과</span>
+                  <span>기독교학과</span>
+                  <span>불교학과</span>
+                  <span>종교문화학과</span>
+                  <span>종교학과</span>
+                  <span>원불교학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1TVYgYYRfb4wLvSXXy8rN1sWE_JU_tPwW/view?usp=sharing" target="_blank">중국어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>중어중문학과</span>
+                  <span>중국학과</span>
+                  <span>중국어학과</span>
+                  <span>중국언어문화전공</span>
+                  <span>관광중국어과</span>
+                  <span>중국비즈니스전공</span>
+                  <span>중국어서비스전공</span>
+                  <span>한중통번역전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Q0MSnAEk5SVK9pdS9jjEUpImF6qDdys5/view?usp=sharing" target="_blank">철학＇윤리학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>철학과</span>
+                  <span>철학전공</span>
+                  <span>역사철학부</span>
+                  <span>윤리문화학전공</span>
+                  <span>철학윤리학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1TLb-xI-I8ArOU27n7MPAjtSHfg8ZlIIX/view?usp=sharing" target="_blank">프랑스어＇문학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>불어불문학과</span>
+                  <span>프랑스어과</span>
+                  <span>프랑스어문학과</span>
+                  <span>프랑스언어문화학과</span>
+                  <span>프랑스학과</span>
+                </div>
+              </li>
+            </ul>
+            
+            <ul class="dot-list v1 y non_table">
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1qPcoJwj7nFmN8eLXOFRQfUb6SRvTq4Ur/view?usp=sharing" target="_blank">경영학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>경영학과</span>
+                  <span>경영정보학과</span>
+                  <span>글로벌경영학과</span>
+                  <span>국제경영학과</span>
+                  <span>융합경영학과</span>
+                  <span>글로벌비즈니스학과</span>
+                  <span>국제산업정보학과</span>
+                  <span>디지털경영전공</span>
+                  <span>빅데이터경영학과</span>
+                  <span>서비스경영과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1CgxhpPjCgH2IFPBJYaZm_Yo1egpItfIN/view?usp=sharing" target="_blank">경제학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>경제학과</span>
+                  <span>농업경제학과</span>
+                  <span>글로벌경제학과</span>
+                  <span>경제통상학부</span>
+                  <span>경제금융학과</span>
+                  <span>산업경제학과</span>
+                  <span>자원경제학과</span>
+                  <span>행정경제학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1qbEpasfudjs51VbQNc1Uv6nujAdoNwvS/view?usp=sharing" target="_blank">경찰행정학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>경찰(경호)행정학과</span>
+                  <span>경찰학과</span>
+                  <span>경찰경호과</span>
+                  <span>해양경찰학과</span>
+                  <span>사이버경찰과</span>
+                  <span>범죄수사학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1AOvyEBMM7vdNLm9hK8Rxr1B_Bv2x5cwX/view?usp=sharing" target="_blank">광고·홍보학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>광고홍보학과</span>
+                  <span>광고홍보학전공</span>
+                  <span>언론광고학부</span>
+                  <span>언론홍보학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1iz8z354H2aGm1XmTlT-0Bp8-DytOO6fV/view?usp=sharing" target="_blank">국제학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>국제학부</span>
+                  <span>국제관계학과</span>
+                  <span>국제개발협력전공</span>
+                  <span>아시아국제관계학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1U7-ek9EMDJhm84a1FCmZV_p3KZMbCGNW/view?usp=sharing" target="_blank">금융·보험학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>금융보험학과</span>
+                  <span>자산관리(운용)학과</span>
+                  <span>금융자산관리학과</span>
+                  <span>국제금융학과</span>
+                  <span>금융경영학과</span>
+                  <span>금융재무학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Kd7xY4MXMmkdnH-fN7sRULUec3wJqVTO/view?usp=sharing" target="_blank">노인복지학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>노인복지학과</span>
+                  <span>고령친화융복합학과</span>
+                  <span>실버케어복지학과</span>
+                  <span>고령친화서비스전공</span>
+                  <span>노인재활복지학과</span>
+                  <span>실버산업연계전공</span>
+                  <span>실버컨설팅학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/19cqpSM1Z_tKlf4KNG8doLdPcnFJUV91y/view?usp=sharing" target="_blank">도시·지역학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>부동산학과</span>
+                  <span>도시계획부동산학과</span>
+                  <span>도시계획학과</span>
+                  <span>부동산지적학과</span>
+                  <span>지적학과</span>
+                  <span>도시지적행정학과</span>
+                  <span>지역개발학전공</span>
+                  <span>지역정보전공</span>
+                  <span>지리학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1kXt6AXv69BSCAygabUo0w_ZSczt6woom/view?usp=sharing" target="_blank">무역·유통학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>무역학과</span>
+                  <span>국제통상학과</span>
+                  <span>유통물류학과</span>
+                  <span>국제무역학과</span>
+                  <span>국제물류학과</span>
+                  <span>항공항만무역과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1rcgoUSrFG4F-R7Et_WWKNLESP8WJ_0Vp/view?usp=sharing" target="_blank">법학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>법학과</span>
+                  <span>경찰법학전공</span>
+                  <span>공법학전공</span>
+                  <span>법률실무과</span>
+                  <span>사법학전공</span>
+                  <span>지식재산학과</span>
+                  <span>공공인재법학과</span>
+                  <span>국제법무학과</span>
+                  <span>법률행정학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1P22tY-GR9Tc3ibmi2ofhteMxxt42nlCI/view?usp=sharing" target="_blank">보건행정학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>보건행정학과</span>
+                  <span>의료경영과</span>
+                  <span>의무행정과</span>
+                  <span>의료정보시스템전공</span>
+                  <span>보건의료정보과</span>
+                  <span>의료정보관리과</span>
+                  <span>의료정보행정학과</span>
+                  <span>의료코디네이터과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Lf5AOBcZmuRKBbenbtjo6SN1TBCGvRPh/view?usp=sharing" target="_blank">비서학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>비서행정과</span>
+                  <span>비서경영과</span>
+                  <span>국제비서과</span>
+                  <span>비서과</span>
+                  <span>비서사무행정학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1quXdID1d-6JY-fP7QM7_BTI8btla9up-/view?usp=sharing" target="_blank">사회복지학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>사회복지학과</span>
+                  <span>사회복지상담학과</span>
+                  <span>사회복지행정학과</span>
+                  <span>보건복지과</span>
+                  <span>복지경영학과</span>
+                  <span>가족복지과</span>
+                  <span>실용사회복지학과</span>
+                  <span>의료복지학과</span>
+                  <span>임상사회복지전공</span>
+                  <span>장애상담학과</span>
+                  <span>재활상담학과</span>
+                  <span>평생교육(복지)전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1BRHmO_lKmI4o3or02nYGX3Fd017KjdNh/view?usp=sharing" target="_blank">사회학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>사회학과</span>
+                  <span>정보사회학과</span>
+                  <span>도시사회학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1b8TUNJbPaOSdDSdzX4gzfFRJpTZxcoAk/view?usp=sharing" target="_blank">세무·회계학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>세무회계학과</span>
+                  <span>회계학과</span>
+                  <span>세무회계정보과</span>
+                  <span>경영회계학과</span>
+                  <span>세무학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1OgZCKYMGplipZl30RCFghlxPEtwx_xYt/view?usp=sharing" target="_blank">신문방송학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>신문방송학과</span>
+                  <span>언론정보학과</span>
+                  <span>저널리즘전공</span>
+                  <span>커뮤니케이션학과</span>
+                  <span>언론영상학과</span>
+                  <span>방송정보학과</span>
+                  <span>언론심리학부</span>
+                  <span>언론학과</span>
+                  <span>정보문화학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/161oCHon3S-6QptwwSPjCcfmK9gYxXwym/view?usp=sharing" target="_blank">아동·청소년복지학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>아동학과</span>
+                  <span>아동복지학과</span>
+                  <span>아동가족학과</span>
+                  <span>영유아보육학과</span>
+                  <span>보육과</span>
+                  <span>아동교육학과</span>
+                  <span>아동심리학과</span>
+                  <span>아동청소년복지과</span>
+                  <span>청소년학과</span>
+                  <span>특수아동과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/19nKgxose2S-ubpQm4dbTmqJlP5wO1i-M/view?usp=sharing" target="_blank">정보미디어학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>미디어커뮤니케이션학과</span>
+                  <span>디지털미디어학과</span>
+                  <span>방송영상과</span>
+                  <span>미디어콘텐츠학과</span>
+                  <span>방송영상미디어학과</span>
+                  <span>미디어영상학과</span>
+                  <span>광고영상미디어학과</span>
+                  <span>미디어문학과</span>
+                  <span>방송미디어학과</span>
+                  <span>방송제작과</span>
+                  <span>정보미디어학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/14OG8_tN5eYlw1LrHHzd-TGmbt8Cd9ddp/view?usp=sharing" target="_blank">정치외교학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>정치외교학과</span>
+                  <span>통일학부</span>
+                  <span>안보학과</span>
+                  <span>외교학과</span>
+                  <span>정치학과</span>
+                  <span>정치행정학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1b-lZ02UfiFQJhFEzzcYsUVNjT4jLYK8o/view?usp=sharing" target="_blank">항공서비스과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>항공서비스학과</span>
+                  <span>항공운항학과</span>
+                  <span>항공서비스경영학과</span>
+                  <span>항공경영과</span>
+                  <span>항공비서과</span>
+                  <span>항송운항서비스과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1toUzb1VvAPp6rDRlEPQpYecLLDp58EXl/view?usp=sharing" target="_blank">행정학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>행정학과</span>
+                  <span>공공인재학부</span>
+                  <span>공공행정학과</span>
+                  <span>자치행정학과</span>
+                  <span>도시행정학과</span>
+                  <span>행정부동산학부</span>
+                  <span>공공정책전공</span>
+                  <span>소방행정과</span>
+                  <span>토지행정학과</span>
+                  <span>행정정보과</span>
+                  <span>행정정책학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1aqm3m4HeiV1LYLJpeBJp0UMvCHWp_Tvo/view?usp=sharing" target="_blank">호텔·관광경영학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>관광경영학과</span>
+                  <span>호텔관광과</span>
+                  <span>호텔경영학과</span>
+                  <span>관광학부</span>
+                  <span>항공관광과</span>
+                  <span>외식산업과</span>
+                  <span>의료관광과</span>
+                  <span>의료관광서비스전공</span>
+                </div>
+              </li>
+            </ul>
+            <ul class="dot-list v1 y non_table">
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1FgdCrJ5fC4zyf9AVlfhAK-TAo9tJPxqB/view?usp=sharing" target="_blank">(애완)동물학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>애완동물학과</span>
+                  <span>애완동물관리과</span>
+                  <span>특수동물학과</span>
+                  <span>마사과</span>
+                  <span>동물조련사</span>
+                  <span>말산업학과</span>
+                  <span>반려동물산업학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1bVx1ZiLisXt8_vyb7brEqSJSVBS84JiQ/view?usp=sharing" target="_blank">가정관리학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>가정관리학과</span>
+                  <span>아동가족학과</span>
+                  <span>소비자아동학과</span>
+                  <span>주거환경학과</span>
+                  <span>소비자학과</span>
+                  <span>생활복지주거학과</span>
+                  <span>소비자가족학과</span>
+                  <span>소비자정보학과</span>
+                  <span>소비자주거학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="../static/pdf/schdptinfo1_2.pdf" th:src="@{/pdf/schdptinfo1_2}" target="_blank">농업학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>식품생명과학과</span>
+                  <span>축산학과</span>
+                  <span>바이오시스템공학과</span>
+                  <span>가금학과</span>
+                  <span>곤충산업과</span>
+                  <span>낙농학과</span>
+                  <span>농생명학과</span>
+                  <span>농학과</span>
+                  <span>사료생산공학과</span>
+                  <span>스마트팜도시농업과</span>
+                  <span>친환경바이오융합학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1esYTk7nLA-VUnF5yLNFsXHgaTp1IhaAB/view?usp=sharing}" target="_blank">물리·과학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>물리학과</span>
+                  <span>응용물리학과</span>
+                  <span>전자물리학과</span>
+                  <span>나노물리학과</span>
+                  <span>나노과학(공학)전공</span>
+                  <span>물리천문학과</span>
+                  <span>반도체물리학과</span>
+                  <span>지구물리학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1cm44I01yuia75hCncKwtemUmnsM7Ru-f/view?usp=sharing" target="_blank">산림·원예학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>산림과학과</span>
+                  <span>목재응용과학과</span>
+                  <span>임산공학과</span>
+                  <span>환경원예학과</span>
+                  <span>원예디자인과</span>
+                  <span>화훼원예과</span>
+                  <span>생명산업학전공</span>
+                  <span>시설농업학전공</span>
+                  <span>원예조경과</span>
+                  <span>원예학과</span>
+                  <span>임학과</span>
+                  <span>화훼학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1n4t5xic05FGd0y73bS9FYlbXBSmHyJ5T/view?usp=sharing" target="_blank">생명과학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>생명과학과</span>
+                  <span>생명공학과</span>
+                  <span>의생명과학과</span>
+                  <span>의생명공학과</span>
+                  <span>분자생명공학(과학)과</span>
+                  <span>유전공학과</span>
+                  <span>생명시스템학과</span>
+                  <span>바이오산업공학과</span>
+                  <span>나노바이오학과</span>
+                  <span>바이오공학전공</span>
+                  <span>바이오의약전공</span>
+                  <span>생명화학공학과</span>
+                  <span>제약공학전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1z7PFVNVXW5n_9I5jtBt02zNHv9T88Ep4/view?usp=sharing" target="_blank">생물학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>생물학과</span>
+                  <span>생물환경학과</span>
+                  <span>생화학과</span>
+                  <span>미생물학과</span>
+                  <span>분자생물학과</span>
+                  <span>생물과학과</span>
+                  <span>응용(미)생물학과</span>
+                  <span>응용생물화학과</span>
+                  <span>해양생명학과</span>
+                  <span>해양생물학과</span>
+                  <span>바이오동물전공</span>
+                  <span>바이오의약학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1_IV0-cM2rAqoVzXcGEQK_PS6CU4fb2zk/view?usp=sharing" target="_blank">수산학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>수산양식학과</span>
+                  <span>해양바이오산업학과</span>
+                  <span>해양생명의학전공</span>
+                  <span>해양생산학전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1cdnHgzs_Kh1yaRzBOuNGac30MJCVcknZ/view?usp=sharing" target="_blank">수의학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>수의학과</span>
+                  <span>수의예과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1C5OfyARsbwGk27bn3adykLmnJpyLnsRs/view?usp=sharing" target="_blank">수학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>수학과</span>
+                  <span>응용수학과</span>
+                  <span>수리학과</span>
+                  <span>금융수학과</span>
+                  <span>정보수학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1C5vL_KzhYmvdYZkbz7N1T3pxxqGctyx2/view?usp=sharing" target="_blank">식품영양학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>식품영양학과</span>
+                  <span>식품공학(과학)과</span>
+                  <span>식품생명공학과</span>
+                  <span>식품생명과학과</span>
+                  <span>바이오식품과학(공학)과</span>
+                  <span>식품(영양)조리학과</span>
+                  <span>식품개발학과</span>
+                  <span>식품생명학부</span>
+                  <span>식품생물공학과</span>
+                  <span>한방식품과학부</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1RDTPD2_7spbpj4lBtjvrULbIuk1ifER9/view?usp=sharing" target="_blank">식품조리학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>호텔외식조리과</span>
+                  <span>호텔조리과</span>
+                  <span>호텔조리제과제빵과</span>
+                  <span>식품조리학과</span>
+                  <span>제과제빵과</span>
+                  <span>외식조리과</span>
+                  <span>커피바리스타과</span>
+                  <span>푸드스타일링전공</span>
+                  <span>외식조리산업과</span>
+                  <span>한식조리과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1pmRUKR5PFlM9terrxN-v2CneHw_8cmr_/view?usp=sharing" target="_blank">의류·의상학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>의류학과</span>
+                  <span>의류산업학과</span>
+                  <span>의류패션학과</span>
+                  <span>패션산업학과</span>
+                  <span>의상학과</span>
+                  <span>패션마케팅과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1dmOV3il8GYu8yh_7zR5eCZEVWIuuwZgB/view?usp=sharing}" target="_blank">자원학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>식량자원학과</span>
+                  <span>생명자원공학부</span>
+                  <span>임산자원전공</span>
+                  <span>동물자원과학과</span>
+                  <span>산림자원학과</span>
+                  <span>식물자원학과</span>
+                  <span>생물자원과학과</span>
+                  <span>자원공학학과</span>
+                  <span>해양자원학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Jgr2HvucWf9HLG4OjHtM6dMIzVjAEJYU/view?usp=sharing" target="_blank">지구과학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>지질학과</span>
+                  <span>지적학과</span>
+                  <span>지질환경과학과</span>
+                  <span>지구시스템공학과</span>
+                  <span>GIS과</span>
+                  <span>공간(지구)정보전공</span>
+                  <span>지구물리학전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/16rXzm2eS__jvSYyX4z1Ec5tr5LaSYnlq/view?usp=sharing" target="_blank">천문·기상학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>대기환경과학전공</span>
+                  <span>천문우주학과</span>
+                  <span>천문대기과학전공</span>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Qv4c7DOL11hL1v9sbI1-cwLkyhkb3CZ7/view?usp=sharing" target="_blank">통계학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>통계학과</span>
+                  <span>응용통계학과</span>
+                  <span>정보통계학과</span>
+                  <span>데이터과학과</span>
+                  <span>전산통계학과</span>
+                  <span>데이터사이언스학과</span>
+                  <span>빅데이터공학과</span>
+                  <span>금융통계학과</span>
+                  <span>수학통계학부</span>
+                  <span>의료통계전공</span>
+                  <span>수학통계학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1aKQspZD4-ba2DiIkjmOhD7sxpI8tjPUI/view?usp=sharing" target="_blank">화학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>화학과</span>
+                  <span>응용화학과</span>
+                  <span>정밀화학과</span>
+                  <span>화장품과학과</span>
+                  <span>생명화학과</span>
+                  <span>의화학전공</span>
+                </div>
+              </li>
+            </ul>
+            <ul class="dot-list v1 y non_table">
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1NLNDdNcKDZhVMxzdxK0NHrJxFs_rS-Kj/view?usp=sharing" target="_blank">(안경)광학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>안경광학과</span>
+                  <span>광공학과</span>
+                  <span>나노광전자학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1R7LPeugmINWnzI_8DPYtUiyWf0H8hKr1/view?usp=sharing" target="_blank">건축·설비공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>건축공학과</span>
+                  <span>건축기계설비과</span>
+                  <span>건축시스템공학과</span>
+                  <span>건설환경계열</span>
+                  <span>건축설비과</span>
+                  <span>건축설비소방과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1cWVGMlzT7FrkGyBmUJUU9OJVPTGF97JT/view?usp=sharing" target="_blank">건축학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>건축학과</span>
+                  <span>건축과</span>
+                  <span>실내건축학과</span>
+                  <span>친환경건축학과</span>
+                  <span>건축디자인전공</span>
+                  <span>건축리모델링과</span>
+                  <span>건축설계전공</span>
+                  <span>도시건축학과</span>
+                  <span>전통건축학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1n6NmUZJLFlFGXco8XO_Tizk_xpyERj1O/view?usp=sharing" target="_blank">게임공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>게임공학과</span>
+                  <span>게임컨텐츠과</span>
+                  <span>게임학과</span>
+                  <span>게임소프트웨어전공</span>
+                  <span>게임애니메이션과</span>
+                  <span>게임제작과</span>
+                  <span>게임컨설팅과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1gHIB6Zf-1jFIyStLIRYgz4647_v_LrGU/view?usp=sharing" target="_blank">기계공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>기계공학과</span>
+                  <span>기계설계공학과</span>
+                  <span>기계융합공학과</span>
+                  <span>자동화시스템과</span>
+                  <span>지능로봇과</span>
+                  <span>컴퓨터응용기계과</span>
+                  <span>기계과</span>
+                  <span>금형(설계)과</span>
+                  <span>기계자동화과</span>
+                  <span>냉동공조공학과</span>
+                  <span>기계자동차과</span>
+                  <span>정밀기계공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Sp4Ehg05bDHCJP2NpIzWcZZyubp1cYu7/view?usp=sharing" target="_blank">도시공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>도시공학과</span>
+                  <span>도시건설과</span>
+                  <span>도시정보공학전공</span>
+                  <span>도시계획공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Kk8FJ94G-7vWxevB1QAl-Mj1Qd1EC_NC/view?usp=sharing" target="_blank">메카트로닉스(기전)공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>메카트로닉스공학과</span>
+                  <span>로봇공학과</span>
+                  <span>스마트팩토리과</span>
+                  <span>기계메카트로닉스공학과</span>
+                  <span>로봇자동화과</span>
+                  <span>자동화기계과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1un5fSJ8CK0bPDKyFiprcTyyD4juQOFU9/view?usp=sharing" target="_blank">반도체·세라믹공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>반도체공학과/span>
+                  <span>반도체디스플레이학과</span>
+                  <span>반도체장비공학과</span>
+                  <span>반도체과학전공</span>
+                  <span>반도체시스템공학과</span>
+                  <span>세라믹공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1qyIAVICtN6pCqPRp9g_pGkCFAcJBz3fQ/view?usp=sharing" target="_blank">산업공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>산업공학과</span>
+                  <span>산업경영공학과</span>
+                  <span>산업시스템공학과</span>
+                  <span>산업정보공학과</span>
+                  <span>시스템경영공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1uqvjX-Nv185cAVI20OYwc8CsjUoFXhqe/view?usp=sharing" target="_blank">섬유공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>섬유소재공학과</span>
+                  <span>섬유시스템공학과</span>
+                  <span>섬유비즈니스과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1OGMkrztcnfsMmwxHv8VKpspOG3kUM26R/view?usp=sharing" target="_blank">소방방재학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>소방방재학과</span>
+                  <span>소방안전관리학과</span>
+                  <span>안전공학과</span>
+                  <span>소방안전공학과</span>
+                  <span>건설방재공학과</span>
+                  <span>소방안전학과</span>
+                  <span>환경방재공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Og1RpnXbpTnQA2YgGLOuClI6tyK0av8Q/view?usp=sharing" target="_blank">신소재공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>신소재공학과</span>
+                  <span>나노신소재공학과</span>
+                  <span>신소재응용과</span>
+                  <span>융합소재공학과</span>
+                  <span>화학신소재학과</span>
+                  <span>나노소재전공</span>
+                  <span>바이오소재공학과</span>
+                  <span>항공신소재전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1sxEOKrNkbk9ua27jcIiHsuWNw2EtaZ8m/view?usp=sharing" target="_blank">에너지공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>에너지자원공학과</span>
+                  <span>원자력공학과</span>
+                  <span>미래에너지공학과</span>
+                  <span>바이오에너지공학과</span>
+                  <span>환경에너지공학과</span>
+                  <span>신재생에너지과</span>
+                  <span>에너지시스템학과</span>
+                  <span>에너지화학공학과</span>
+                  <span>전기에너지공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1dxjOCy--3lOhVuD5mXpHFWjr1fdVSRik/view?usp=sharing" target="_blank">응용소프트웨어공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>디지털콘텐츠과</span>
+                  <span>소프트웨어공학과</span>
+                  <span>스마트소프트웨어과</span>
+                  <span>융합소프트웨어학과</span>
+                  <span>스마트미디어학과</span>
+                  <span>인공지능융합학과</span>
+                  <span>AI소프트웨어전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1vPpMlhCao9FwiAOyavDR1gjjVXpulmqD/view?usp=sharing" target="_blank">자동차공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>자동차공학과</span>
+                  <span>미래자동차공학과</span>
+                  <span>스마트자동차공학과</span>
+                  <span>자동차튜닝과</span>
+                  <span>자동차과</span>
+                  <span>전기자동차과</span>
+                  <span>자동차설계학과</span>
+                  <span>지능형자동차전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1MDWowNQ_3e9TS3RrQX2tAEoBNeBquRDo/view?usp=sharing" target="_blank">재료·금속공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>금속재료과/span>
+                  <span>재료공학과</span>
+                  <span>제철산업과</span>
+                  <span>나노재료공학전공</span>
+                  <span>금속재료공학과</span>
+                  <span>전자재료공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/19qXlNVmq1IRZsbQxfJl-QpuZ8IWC6tu_/view?usp=sharing" target="_blank">전기공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>전기공학과</span>
+                  <span>전기전자과</span>
+                  <span>철도전기과</span>
+                  <span>스마트전기전자과</span>
+                  <span>전기과</span>
+                  <span>전기시스템과</span>
+                  <span>전기에너지과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1erADs2jZGJRG33Fv8OhNR-rWnaut7jJO/view?usp=sharing" target="_blank">전자공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>전자공학과</span>
+                  <span>전자전기공학과</span>
+                  <span>디지털전자과</span>
+                  <span>스마트전자과</span>
+                  <span>디스플레이공학과</span>
+                  <span>반도체전자과</span>
+                  <span>융합전자과</span>
+                  <span>정보전자전공</span>
+                  <span>컴퓨터전자공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1w4t9nIODq3WdKVopj4vzdEcKJY40nUWu/view?usp=sharing" target="_blank">정보·통신공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>정보통신공학과</span>
+                  <span>전자정보통신공학과</span>
+                  <span>ICT융합학과</span>
+                  <span>스마트IT학과</span>
+                  <span>IT 융합학과</span>
+                  <span>IT정보제어공학부</span>
+                  <span>전자정보공학과</span>
+                  <span>정보시스템학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1AGRhreXKH6cK81RoxFEJe7j1BrkOWHem/view?usp=sharing" target="_blank">정보보안·보호학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>정보보안학과</span>
+                  <span>정보보호학과</span>
+                  <span>사이버보안과</span>
+                  <span>IT 보안과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1ZM0KSjjGqzO2sEuYvxNuUYKT6v5t2qUQ/view?usp=sharing" target="_blank">제어계측공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>제어계측공학과</span>
+                  <span>전기전자제어과</span>
+                  <span>전기제어과</span>
+                  <span>시스템제어공학과</span>
+                  <span>전자제어공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1H4Nuw7QNimcnY5Y7EyriYOo64iYyWpHk/view?usp=sharing" target="_blank">조경학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>조경학과</span>
+                  <span>녹지조경학과</span>
+                  <span>환경조경과</span>
+                  <span>도시조경과</span>
+                  <span>산림조경학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1GYiO8CTyc3o2C7L5X9BQarkdu591RksM/view?usp=sharing" target="_blank">지상교통공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>교통공학과</span>
+                  <span>철도운전시스템과</span>
+                  <span>교통시스템공학과</span>
+                  <span>물류시스템공학전공</span>
+                  <span>철도시설과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1-Yd0-uHY0HM4qBB1zjVkMXICcGUoGrfv/view?usp=sharing" target="_blank">컴퓨터공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>컴퓨터공학과</span>
+                  <span>멀티미디어공학과</span>
+                  <span>컴퓨터시스템공학과</span>
+                  <span>응용시스템학과</span>
+                  <span>컴퓨터과학전공</span>
+                  <span>전산학과</span>
+                  <span>전자계산학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1miVNVMrSW8K7EdmKYVIwDbMk3-imHWQ4/view?usp=sharing}" target="_blank">토목공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>토목공학과</span>
+                  <span>건설시스템공학과</span>
+                  <span>건설환경공학과</span>
+                  <span>철도건설과</span>
+                  <span>토목과</span>
+                  <span>건설환경공학전공</span>
+                  <span>토목조경과</span>
+                  <span>토목환경과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1nMhsbZ96YK8UfdzHbcs146YhMMwDgJ_0/view?usp=sharing}" target="_blank">항공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>항공우주공학과</span>
+                  <span>항공시스템공학과</span>
+                  <span>항공정비학과</span>
+                  <span>무인항공(드론)학과</span>
+                  <span>항공교통학과</span>
+                  <span>항공보안과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1T2Eao_xnxk39ggWxgPnCMUHMpH3Y6Lin/view?usp=sharing" target="_blank">해양공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>해양공학과</span>
+                  <span>선박해양공학과</span>
+                  <span>조선해양공학과</span>
+                  <span>조선해양플랜트과</span>
+                  <span>조선기계과</span>
+                  <span>해양학과</span>
+                  <span>해양시스템공학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1_3W2_vG_xIybHezDBjZy8L1JEqj8UqlI/view?usp=sharing" target="_blank">화학공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>화학공학과</span>
+                  <span>고분자공학과</span>
+                  <span>생명화학공학과</span>
+                  <span>화공생명학과</span>
+                  <span>나노화학공학과</span>
+                  <span>신소재학과</span>
+                  <span>응용화학공학과</span>
+                  <span>화장품학전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1XP2QxF2G1EFHFl4oI4eQLkHtw7TeVjxh/view?usp=sharing" target="_blank">환경공학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>환경공학과</span>
+                  <span>지구환경과학과</span>
+                  <span>환경보건학과</span>
+                  <span>환경생명공학과</span>
+                  <span>환경시스템공학과</span>
+                  <span>환경학과</span>
+                  <span>생태환경관광학부</span>
+                  <span>해양환경학과</span>
+                </div>
+              </li>
+            </ul>
+            <ul class="dot-list v1 y non_table">
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1GKoHjm9rTQwjMDyTJCvevrM3rQGegkgQ/view?usp=sharing" target="_blank">경호학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>경호학과</span>
+                  <span>경호스포츠과</span>
+                  <span>경호보안학과</span>
+                  <span>경찰무도학과</span>
+                  <span>경호비서학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1LzhjdgHb-lsnIZueORvDqr6RcuLD6WH_/view?usp=sharing">공예학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>공예과</span>
+                  <span>공예디자인학과</span>
+                  <span>귀금속보석공예학과</span>
+                  <span>도예학과</span>
+                  <span>금속공예학과</span>
+                  <span>세라믹디자인학과</span>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1sKMakO1SgCidhHcAg9xIZ2cbwiQCsv-Y/view?usp=sharing" target="_blank">만화·애니메이션학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>만화애니메이션학과</span>
+                  <span>웹툰창작과</span>
+                  <span>만화콘텐츠과</span>
+                  <span>만화애니게임학과</span>
+                  <span>영상애니메이션과</span>
+                  <span>게임영상(콘텐츠)과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1lG8U6YR37xOeo_OjvzY8VrLTOzimkaN1/view?usp=sharing" target="_blank">무용학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>무용학과</span>
+                  <span>무용예술학과</span>
+                  <span>발레전공</span>
+                  <span>한국무용전공</span>
+                  <span>현대무용전공</span>
+                  <span>생활무용학과</span>
+                  <span>실용무용전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1IpYlFB07tqjC7B6Agq1RPzrVnZlHvh90/view?usp=sharing" target="_blank">미술학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>미술학과</span>
+                  <span>회화과</span>
+                  <span>동양화과</span>
+                  <span>서양화과</span>
+                  <span>한국화과</span>
+                  <span>순수미술과</span>
+                  <span>실용미술과</span>
+                  <span>아동미술지도학과</span>
+                  <span>응용미술학과</span>
+                  <span>큐레이터전공</span>
+                  <span>현대미술전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1bs4UHQCQRGMaE8aSykfG5M9RSGdwObyP/view?usp=sharing" target="_blank">방송·연예과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>방송연예학과</span>
+                  <span>공연예술과</span>
+                  <span>모델과</span>
+                  <span>엔터테인먼트과</span>
+                  <span>방송기술학과</span>
+                  <span>방송연기전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1ljg2O2U3fK1PbKRiRuFzcFoe_33gaxyr/view?usp=sharing" target="_blank">뷰티아트과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>미용과</span>
+                  <span>미용예술과</span>
+                  <span>뷰티디자인과</span>
+                  <span>뷰티아트과</span>
+                  <span>피부미용학과</span>
+                  <span>뷰티케어과</span>
+                  <span>메이크업전공</span>
+                  <span>뷰티매니저학과</span>
+                  <span>스타일리스트과</span>
+                  <span>코티네이션과</span>
+                  <span>헤어전공</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1IUg1U1O3ERsXlX2rT_rTIzMCXc8cbf_l/view?usp=sharing" target="_blank">사진·영상예술학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>사진학과</span>
+                  <span>사진영상학과</span>
+                  <span>공연영상학과</span>
+                  <span>미디어디자인과</span>
+                  <span>방송영상과</span>
+                  <span>영상디자인과</span>
+                  <span>디지털콘텐츠과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/15hB5JnSRCK0pa63fyWFCwiGZyDkg4w6n/view?usp=sharing" target="_blank">산업디자인학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>산업디자인학과</span>
+                  <span>제품디자인공학전공</span>
+                  <span>색채디자인과</span>
+                  <span>제품디자인과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1Xkd2KRnwgjMVJuEyEt8QjgVilFd8nGVv/view?usp=sharing" target="_blank">시각디자인학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>시각디자인학과</span>
+                  <span>디지털디자인학과</span>
+                  <span>멀미미디어디자인학과</span>
+                  <span>커뮤니케이션디자인학과</span>
+                  <span>광고디자인과</span>
+                  <span>시각영상디자인과</span>
+                  <span>시각정보디자인전공</span>
+                  <span>출판디자인과</span>
+                  <span>그래픽디자인학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1IbZPJ_Xxq6Fuwrq9m4tb6k8FI9o7b0cT/view?usp=sharing" target="_blank">실내디자인학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>실내디자인학과</span>
+                  <span>디지털디자인학과</span>
+                  <span>멀티미디어디자인학과</span>
+                  <span>커뮤니케이션디자인학과</span>
+                  <span>광고디자인과</span>
+                  <span>시각영상디자인과</span>
+                  <span>시각정보디자인전공</span>
+                  <span>출판디자인과</span>
+                  <span>그래픽디자인학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1gqV1kBdJG02SWfpMZvj5lahGcMpQ3JJR/view?usp=sharing" target="_blank">실용음악과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>실용음악과</span>
+                  <span>생활음악과</span>
+                  <span>뮤직테크놀로지과</span>
+                  <span>뮤직프로덕션과</span>
+                  <span>대중음악과</span>
+                  <span>보컬과</span>
+                  <span>음악콘텐츠학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1UajKA77QVpcc5JRmzGdxi061ahL-YXPl/view?usp=sharing" target="_blank">연극·영화학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>무대디자인과</span>
+                  <span>연극영화학과</span>
+                  <span>연극전공</span>
+                  <span>영화전공</span>
+                  <span>연기예술학과</span>
+                  <span>연극영상학과</span>
+                  <span>방송영화제작과</span>
+                  <span>뮤지컬과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1k9bObSkir4XXSGxcAzD4eXA9M4q-EiNg/view?usp=sharing" target="_blank">음악학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>음악학과</span>
+                  <span>국악과</span>
+                  <span>기악과</span>
+                  <span>관현악과</span>
+                  <span>피아노과</span>
+                  <span>성악과</span>
+                  <span>작곡과</span>
+                  <span>공연음악학과</span>
+
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1sHWQ3lKo_3gIsLFKeHiVR_tDuszN7vcb/view?usp=sharing" target="_blank">음향과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>음향제작과</span>
+                  <span>음향과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1TlV3h8FVKtEPoVupcWkA5yAftl6jiGlZ/view?usp=sharing" target="_blank">조형학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>조형학과</span>
+                  <span>생활조형디자인인학과</span>
+                  <span>조소과</span>
+                  <span>판화과</span>
+                  <span>조각학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/1cqp4p9X5S5Q9CgTXhWAtG4HFLSwi6G3M/view?usp=sharing" target="_blank">체육학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>체육학과</span>
+                  <span>사회체육학과</span>
+                  <span>생활체육학과</span>
+                  <span>운동처방학과</span>
+                  <span>스포츠과학과</span>
+                  <span>스포츠레저학과</span>
+                  <span>골프산업학과</span>
+                  <span>태권도과</span>
+                  <span>골프과</span>
+                  <span>스포츠(경기)지도학과</span>
+                  <span>스포츠산업학과</span>
+                  <span>스포츠재활학과</span>
+                </div>
+              </li>
+              <li>
+                <p class="font-bold mg00">
+                  <a href="https://drive.google.com/file/d/145O6x5DAfyBOz7v7pdBdghKsXEOe8zML/view?usp=sharing" target="_blank">패션디자인학과</a>
+                </p>
+                <div class="label-wrap line-0 mb10">
+                  <span>의상디자인학과</span>
+                  <span>패션디자인학과</span>
+                  <span>섬유패션디자인전공</span>
+                  <span>텍스타일디자인학과</span>
+                  <span>섬유디자인전공</span>
+                  <span>패션디자인산업학과</span>
+                </div>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+    </section><!-- End Events Section -->
+
+  </main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>등대지기</h3>
+          <p>
+            <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="height: 18vh;"><br>
+            <strong>Phone:</strong> 010-2390-5860<br>
+            <strong>Email:</strong> dkdlehf260@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          <h3>사이트</h3>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="index.html" th:href="@{/index}">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="major.html" th:href="@{/courses}">학과정보</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="job.html" th:href="@{/job}">직업정보</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="license.html" th:href="@{/license}">자격증</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-md-flex py-4">
+
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; Copyright <strong><span>giho Lee</span></strong>.
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+      </div>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../static/vendor/purecounter/purecounter.js" th:src="@{/vendor/purecounter/purecounter.js}"></script>
+<script src="../static/vendor/aos/aos.js" th:src="@{/vendor/aos/aos.js}"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script src="../static/vendor/swiper/swiper-bundle.min.js" th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+<script src="../static/vendor/php-email-form/validate.js" th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+<!-- Template Main JS File -->
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+<script src="../static/js/major.js" th:src="@{/js/major.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>당신의 길을 밝히다. 등대지기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/logo.png" th:src="@{/img/logo.png}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/animate.css/animate.min.css" th:href="@{/vendor/animate.css/animate.min.css}" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor - v4.7.0
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html" th:href="@{/index}">등대지기</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="active" href="index.html" th:href="@{/index}">Home</a></li>
+
+        <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>학과정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>계열소개</span> </a>
+            </li>
+            <li class="dropdown"><a href="major-details.html" th:href="@{/major-details}"><span>계열별 전공소개</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>직업정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>이달의 인터뷰</span> </a>
+            </li>
+            <li class="dropdown"><a href="job-details.html" th:href="@{/job-details}"><span>직업 분류표</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>자격증</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>국가기술시험 일정</span> </a>
+            </li>
+            <li class="dropdown"><a href="license-details.html" th:href="@{/license-details}"><span>분야별 자격증</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+        <li><a href="mypage.html" th:href="@{/mypage}">마이페이지</a></li>
+        <li><a href="signup.html" th:href="@{/signup}">회원가입</a></li>
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <a href="login.html" th:href="@{/login}" class="get-started-btn">Login</a>
+
+  </div>
+</header><!-- End Header -->
+
+  <main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h3>이달의 인터뷰</h3>
+        <p>다양한 분야에서 자신만의 입지를 다지고 널리 이름을 알린 직업인들의 인터뷰를 담았습니다. <br>
+          이달의 직업인으로 선정된 3인을 소개합니다. </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Trainers Section ======= -->
+
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="../static/img/job/job-1.png" th:src="@{/img/job/job-1.png}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>송길영</h4>
+                <span>빅데이터 전문가</span>
+                <p>
+                  세상에 존재하는 방대한 빅데이터를 분석해 부가 가치가 높은 정보로 만들어 내는 사람. 거대한 규모의 데이터를 목적에 맞게 수집·분석·활용하고, 데이터에 숨어 있는 정보나 일정한 패턴을 찾아내 현상을 분석하며, 데이터를 통해 사람의 마음이나 세상의 흐름을 읽고, 심지어 미래를 예측하기도 한다.
+                </p>
+                <div class="social">
+                  <a href="https://www.youtube.com/watch?v=Kr2t3h2z3ik&feature=youtu.be"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="../static/img/job/job-2.png" th:src="@{/img/job/job-2.png}"class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>곽문준</h4>
+                <span>경찰관</span>
+                <p>
+                  경찰관은 국민의 생명과 재산을 보호하는 역할을 한다. 범죄 수사를 통해 범인을 잡고, 안전한 사회를 만들기 위해 노력한다. 치안에 관련된 정보를 수집하고, 보안경찰은 간첩을 잡는 일을 한다.
+                </p>
+                <div class="social">
+                  <a href="https://www.youtube.com/watch?v=8Lvxhxt6A_4"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="../static/img/job/job-3.png" th:src="@{/img/job/job-3.png}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>곽은미</h4>
+                <span>음악치료사</span>
+                <p>
+                  음악치료사는 음악을 이용해 사람의 신체와 정신을 치료하는 일을 담당한다.
+                  환자와 함께 피아노, 오르간, 북, 징, 꽹가리 등의 악기를 이용해서 즉흥 연주 및 작곡을 하면서 환자의 음악적 표현을 이끌어내고 음악연주를 통해 나타나는 환자의 상태를 진단·평가한다.
+                </p>
+                <div class="social">
+                  <a href="https://www.youtube.com/watch?v=Smm1UnBWWCs&t=11s"><i class="bi bi-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>등대지기</h3>
+            <p>
+              <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="height: 18vh;"><br>
+              <strong>Phone:</strong> 010-2390-5860<br>
+              <strong>Email:</strong> dkdlehf260@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h3>사이트</h3>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html" th:href="@{/index}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="major.html" th:href="@{/courses}">학과정보</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="job.html" th:href="@{/job}">직업정보</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="license.html" th:href="@{/license}">자격증</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>giho Lee</span></strong>.
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/purecounter/purecounter.js" th:src="@{/vendor/purecounter/purecounter.js}"></script>
+  <script src="../static/vendor/aos/aos.js" th:src="@{/vendor/aos/aos.js}"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js" th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script src="../static/vendor/php-email-form/validate.js" th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>당신의 길을 밝히다. 등대지기</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="../static/img/logo.png" th:src="@{/img/logo.png}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/vendor/animate.css/animate.min.css" th:href="@{/vendor/animate.css/animate.min.css}" rel="stylesheet">
+  <link href="../static/vendor/aos/aos.css" th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+  <link href="../static/vendor/boxicons/css/boxicons.min.css" th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link href="../static/vendor/remixicon/remixicon.css" th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+  <link href="../static/vendor/swiper/swiper-bundle.min.css" th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor - v4.7.0
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo me-auto"><a href="index.html" th:href="@{/index}">등대지기</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a class="active" href="index.html" th:href="@{/index}">Home</a></li>
+
+        <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>학과정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>계열소개</span> </a>
+            </li>
+            <li class="dropdown"><a href="major-details.html" th:href="@{/major-details}"><span>계열별 전공소개</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>직업정보</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>이달의 인터뷰</span> </a>
+            </li>
+            <li class="dropdown"><a href="job-details.html" th:href="@{/job-details}"><span>직업 분류표</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>자격증</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+            <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>국가기술시험 일정</span> </a>
+            </li>
+            <li class="dropdown"><a href="license-details.html" th:href="@{/license-details}"><span>분야별 자격증</span> </a>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+        <li><a href="mypage.html" th:href="@{/mypage}">마이페이지</a></li>
+        <li><a href="signup.html" th:href="@{/signup}">회원가입</a></li>
+
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+
+    <a href="login.html" th:href="@{/login}" class="get-started-btn">Login</a>
+
+  </div>
+</header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>계열소개</h2>
+        <p>계열에 대한 개괄적 소개와 해당계열에서 필요로 하는 적성 및 흥미를 소개합니다.  </p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="../static/img/major-1.jpg" th:src="@{/img/major-1.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="major-details.html" th:href="@{/major-details}">인문＇사회계열</a></h5>
+                <p class="fst-italic text-center">Humanitiy and Sociology</p>
+                <p class="card-text">인간 사회의 문화와 사회 질서 및 역사와 그 문화에 따른 언어학을 탐구 및 연구하는 교육 과정
+                  <li>언어와 문학에 관심과 소질, 사회변화를 읽는 능력</li>
+                  <li>적용되는 분야에 따라 법학, 졍제학, 정치학 등 다양한 사회과학 지식이 요구</li>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 d-flex align-items-stretch">
+            <div class="card">
+              <div class="card-img">
+                <img src="../static/img/major-2.jpg" th:src="@{/img/major-2.jpg}" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><a href="major-details.html" th:href="@{/major-details}">자연계열</a></h5>
+                <p class="fst-italic text-center">Natural Science</p>
+                <p class="card-text">과학(물리학, 화학, 생명과학, 지구과학), 수학 등의 자연 질서와 논리학에 대하여 탐구 및 연구하는 교육 과정
+                  <li>자연현상에 호기심과 관찰력, 논리적인 분석력 필요</li>
+                  <li>문제해결 과정을 중요하게 여기고 이러한 과정에 흥미</li>
+                </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-img">
+                  <img src="../static/img/major-3.jpg" th:src="@{/img/major-3.jpg}" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><a href="major-details.html" th:href="@{/major-details}">공학계열</a></h5>
+                  <p class="fst-italic text-center">Engineering</p>
+                  <p class="card-text">자연 자체를 대상으로 하는 자연과학과 달리 기계, 장치 등의 인위적인 자연을 대상으로 하여 실제로 무엇인가를 생산하는 실천 행동에 중점을 두는 교육 과정
+                    <li>자연현상에 호기심과 관찰력, 논리적인 분석력 필요</li>
+                    <li>문제해결 과정을 중요하게 여기고 이러한 과정에 흥미</li>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-stretch">
+              <div class="card">
+                <div class="card-img">
+                  <img src="../static/img/major-4.jpg" th:src="@{/img/major-4.jpg}" alt="...">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><a href="major-details.html" th:href="@{/major-details}">예체능계열</a></h5>
+                  <p class="fst-italic text-center">Fine Arts and Athletics</p>
+                  <p class="card-text">변화하는 시대에 맞게 첨단화, 전문화 되어가고 있는 예술 환경의 변화에 대처할 수 있는 전문 예술인과 신체 활동을 통해 개인 건강유지 및 대중들이 쉽게 접할 수 있는 활동을 지도할 수 있는 체육인을 양성하는데 목표를 두는 교육 과정
+                    <li>풍부한 상상력과 능력을 습득하기 위한 노력과 연습 필요</li>
+                    <li>건강한 육체와 사고, 자기관리능력 요구</li>
+                  </p>
+                </div>
+              </div>
+
+            </div>
+        </div>
+
+      </div>
+    </section><!-- End Events Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>등대지기</h3>
+            <p>
+              <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="height: 18vh;"><br>
+              <strong>Phone:</strong> 010-2390-5860<br>
+              <strong>Email:</strong> dkdlehf260@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h3>사이트</h3>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html" th:href="@{/index}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="major.html" th:href="@{/courses}">학과정보</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="job.html" th:href="@{/job}">직업정보</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="license.html" th:href="@{/license}">자격증</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>giho Lee</span></strong>.
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/vendor/purecounter/purecounter.js" th:src="@{/vendor/purecounter/purecounter.js}"></script>
+  <script src="../static/vendor/aos/aos.js" th:src="@{/vendor/aos/aos.js}"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script src="../static/vendor/swiper/swiper-bundle.min.js" th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+  <script src="../static/vendor/php-email-form/validate.js" th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+
+</body>
+
+</html>

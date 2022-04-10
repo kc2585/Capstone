@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>당신의 길을 밝히다. 등대지기</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../static/img/logo.png" th:src="@{/img/logo.png}" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../static/vendor/animate.css/animate.min.css" th:href="@{/vendor/animate.css/animate.min.css}" rel="stylesheet">
+    <link href="../static/vendor/aos/aos.css" th:href="@{/vendor/aos/aos.css}" rel="stylesheet">
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" th:href="@{/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="../static/vendor/bootstrap-icons/bootstrap-icons.css" th:href="@{/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
+    <link href="../static/vendor/boxicons/css/boxicons.min.css" th:href="@{/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+    <link href="../static/vendor/remixicon/remixicon.css" th:href="@{/vendor/remixicon/remixicon.css}" rel="stylesheet">
+    <link href="../static/vendor/swiper/swiper-bundle.min.css" th:href="@{/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: Mentor - v4.7.0
+    * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+</head>
+
+<body>
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+        <h1 class="logo me-auto"><a href="index.html" th:href="@{/index}">등대지기</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo me-auto"><img src="../static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar order-last order-lg-0">
+            <ul>
+                <li><a class="active" href="index.html" th:href="@{/index}">Home</a></li>
+
+                <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>학과정보</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="major.html" th:href="@{/major}"><span>계열소개</span> </a>
+                        </li>
+                        <li class="dropdown"><a href="major-details.html" th:href="@{/major-details}"><span>계열별 전공소개</span> </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>직업정보</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="job.html" th:href="@{/job}"><span>이달의 인터뷰</span> </a>
+                        </li>
+                        <li class="dropdown"><a href="job-details.html" th:href="@{/job-details}"><span>직업 분류표</span> </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>자격증</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown"><a href="license.html" th:href="@{/license}"><span>국가기술시험 일정</span> </a>
+                        </li>
+                        <li class="dropdown"><a href="license-details.html" th:href="@{/license-details}"><span>분야별 자격증</span> </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+                <li><a href="signup.html" th:href="@{/signup}">회원가입</a></li>
+
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <a href="login.html" th:href="@{/login}" class="get-started-btn">Login</a>
+
+    </div>
+</header><!-- End Header -->
+
+<!-- Start Featured Product -->
+<section class="bg-light">
+    <div class="container py-2">
+        <div class="row py-4">
+            <div class="d-flex justify-content-between">
+                <h4 class="h4">매칭게시판</h4>
+<!--                <form action="/search" method="post" class="d-flex col-3">-->
+<!--                    <input type="search" id="search" class="form-control" />-->
+<!--                    <button type="button" class="btn btn-primary">-->
+<!--                        <i class="fas fa-search"></i>-->
+<!--                    </button>-->
+<!--                </form>-->
+            </div>
+            <div class="d-flex my-2">
+<!--                <a class="nav-link px-0 pe-3 text-black" href="#">인기</a>-->
+<!--                <a class="nav-link px-0 pe-3 text-black" href="#">최신</a>-->
+                <div class="btn-group ms-auto">
+                    <div class="dropdown show mx-2">
+                        <a class="btn btn-dark dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            카테고리
+                        </a>
+                        <div class="dropdown-menu" id="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" th:href="@{/community}">전체</a>
+                            <a class="dropdown-item" th:href="@{/community/free}">자유</a>
+                            <a class="dropdown-item" th:href="@{/community/question}">멘토</a>
+                            <a class="dropdown-item" th:href="@{/community/study}">멘티</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary"><a href="/community/write" class="m-0 p-0 text-white text-decoration-none">글쓰기</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mx-5">
+        <div class="col-12 col-md-4 mb-4" th:each="post : ${postList}">
+            <div class="card h-80" style="display:block">
+<!--                <a th:href="@{/community/post(postId=${post.postId})}">-->
+<!--                    <img src="../static/img/feature_prod_01.jpg" class="card-img-top" alt="...">-->
+<!--                </a>-->
+                <div class="card-body">
+                    <a th:href="@{/community/{postId}(postId=${post.postId})}" class="h2 text-decoration-none text-dark" th:text="${post.title}" style="text-overflow:ellipsis; overflow: hidden; white-space:nowrap"></a>(<span th:text="${post.commentNum}"></span>)
+                    <p class="card-text pt-3" th:text="${post.context}" style="text-overflow:ellipsis; overflow: hidden; white-space:nowrap">
+                    </p>
+                    <p class="text-sm"><span th:text="${post.createdAt}"></span></p>
+                    <ul class="list-unstyled d-flex justify-content-between mb-0">
+                        <li th:text="${post.userName}"></li>
+                        <li class="text-right">❤(<span th:text="${post.heartNum}"></span>)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- End Featured Product -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3>등대지기</h3>
+                    <p>
+                        <img src="../static/img/logo.png" th:src="@{/img/logo.png}" style="height: 18vh;"><br>
+                        <strong>Phone:</strong> 010-2390-5860<br>
+                        <strong>Email:</strong> dkdlehf260@gmail.com<br>
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h3>사이트</h3>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="index.html" th:href="@{/index}">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="major.html" th:href="@{/courses}">학과정보</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="job.html" th:href="@{/job}">직업정보</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="license.html" th:href="@{/license}">자격증</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="community.html" th:href="@{/community}">매칭게시판</a></li>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+                &copy; Copyright <strong><span>giho Lee</span></strong>.
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<!-- Start Script -->
+<script>
+const button = document.querySelector('#dropdownMenuLink');
+
+button.addEventListener('click', () => {
+const dropdown = document.querySelector('#dropdown-menu');
+    if(dropdown.style.display == 'block'){
+        dropdown.style.display = '';
+    }
+    else {
+        dropdown.style.display = 'block'
+    }
+});
+</script>
+
+<div id="preloader"></div>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../static/vendor/purecounter/purecounter.js" th:src="@{/vendor/purecounter/purecounter.js}"></script>
+<script src="../static/vendor/aos/aos.js" th:src="@{/vendor/aos/aos.js}"></script>
+<script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js" th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script src="../static/vendor/swiper/swiper-bundle.min.js" th:src="@{/vendor/swiper/swiper-bundle.min.js}"></script>
+<script src="../static/vendor/php-email-form/validate.js" th:src="@{/vendor/php-email-form/validate.js}"></script>
+
+<!-- Template Main JS File -->
+<script src="../static/js/main.js" th:src="@{/js/main.js}"></script>
+
+</body>
+
+</html>
